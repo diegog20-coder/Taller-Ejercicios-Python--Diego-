@@ -124,7 +124,7 @@ A continuación se listan los 30 ejercicios. **Debe escribir el valor exacto de 
 | # | Ejercicio | Solución |
 |---|-----------|----------|
 | 01 | ¿Cuántas filas tienen el campo `id` con caracteres no numéricos? | `PENDIENTE` |
-| 02 | ¿Cuántas veces aparece el nombre "Maria" en el dataset? | `PENDIENTE` |
+| 02 | ¿Cuántas veces aparece el nombre "Maria" en el dataset? | `4160` |
 | 03 | ¿Cuántas veces aparece el nombre "Juan" en el dataset? | `PENDIENTE` |
 | 04 | ¿Cuál es el nombre más frecuente y cuántas veces aparece? | `PENDIENTE` |
 | 05 | ¿Cuál es el apellido más frecuente y cuántas veces aparece? | `PENDIENTE` |
