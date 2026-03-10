@@ -139,3 +139,4 @@ print("\n")
 print("=" * 60)
 print("✅ Archivo guardado como: data/personas_limpio.csv")
 print("=" * 60)
+
