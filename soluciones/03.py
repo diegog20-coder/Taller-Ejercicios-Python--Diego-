@@ -11,5 +11,5 @@ def decifrar_palabra(palabra_cifrada):
     return nueva_palabra
 
 datos['nombre'] = datos['nombre_cifrado'].apply(decifrar_palabra)
-condicion = datos ['nombre']=="Gabriel"
-print("Gabriel aparece:",datos[condicion].shape[0])
+condicion = datos ['nombre']=="Juan"
+print("Juan aparece:",datos[condicion].shape[0])
