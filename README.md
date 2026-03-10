@@ -134,7 +134,7 @@ A continuación se listan los 30 ejercicios. **Debe escribir el valor exacto de 
 | 09 | ¿Cuántos registros tienen la profesión "Ingeniero" después de limpiar? | `12083` |
 | 10 | ¿Cuántos registros tienen la profesión "Programador" después de limpiar? | `12062` |
 | 11 | ¿Cuántas profesiones únicas existen después de normalizar? | `25` |
-| 12 | ¿Cuántos registros tienen el campo `email` con espacios adicionales? | `PENDIENTE` |
+| 12 | ¿Cuántos registros tienen el campo `email` con espacios adicionales? | `47` |
 | 13 | ¿Cuántos registros tienen el campo `salario` con caracteres no numéricos? | `PENDIENTE` |
 | 14 | ¿Cuál es el salario promedio después de limpiar? | `PENDIENTE` |
 | 15 | ¿Cuál es el salario máximo después de limpiar? | `PENDIENTE` |
