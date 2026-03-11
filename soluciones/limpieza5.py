@@ -87,3 +87,97 @@ print("\n")
 print("=" * 60)
 print("✅ Análisis completo. Revisar resultados antes de limpiar.")
 print("=" * 60)
+
+#============================================================
+#Aplicar un filtro a la columna salario para contar cuántos registros contienen caracteres especiales como [ ] o .
+
+salario_str = df['salario'].astype(str)
+mask_special_chars = salario_str.str.contains(r'[\[\]\.]', na=False)
+print(f"Number of records with special characters ([, ], .): {mask_special_chars.sum()}")
+
+##
+
+salarios_filtrados = df[mask_special_chars][['salario']]
+print("Salarios con caracteres especiales (']', '[', '.'):")
+print(salarios_filtrados)
+
+##
+# Mapear 'l' a '1' y 'O' a '0'
+df['salario'] = df['salario'].astype(str).str.replace('l', '1', regex=False)
+df['salario'] = df['salario'].astype(str).str.replace('L', '1', regex=False)
+df['salario'] = df['salario'].astype(str).str.replace('O', '0', regex=False)
+df['salario'] = df['salario'].astype(str).str.replace('o', '0', regex=False)
+print("✔ 'l' y 'O' mapeados a '1' y '0' respectivamente.")
+
+# Eliminar 'aprox.' y 'aprox' (con y sin punto)
+df['salario'] = df['salario'].astype(str).str.replace(r'aprox\.?\\s*', '', regex=True, flags=re.IGNORECASE)
+print("✔ 'aprox.' eliminado.")
+
+# Eliminar todos los caracteres que no sean dígitos, puntos o comas
+df['salario'] = df['salario'].astype(str).str.replace(r'[^0-9.,]', '', regex=True)
+print("✔ Caracteres no numéricos restantes eliminados.")
+
+# normalizar el separador decimal y de miles
+def normalize_salario(salario_str):
+    if isinstance(salario_str, (int, float)):
+        return str(salario_str)
+    
+    salario_str = str(salario_str).strip()
+    
+    # Si hay coma y punto, asumimos punto miles, coma decimal
+    if ',' in salario_str and '.' in salario_str:
+        # Eliminar miles y reemplazar coma por punto
+        if salario_str.rfind(',') > salario_str.rfind('.'): # e.g. 1.234.567,89
+            salario_str = salario_str.replace('.', '').replace(',', '.')
+        else: # e.g. 1,234,567.89
+            salario_str = salario_str.replace(',', '')
+    # Si solo hay coma, asumimos que es decimal
+    elif ',' in salario_str:
+        salario_str = salario_str.replace(',', '.')
+        
+    return salario_str
+
+df['salario'] = df['salario'].apply(normalize_salario)
+print("✔ Separadores decimales y de miles normalizados.")
+
+# Convertir a tipo numérico
+df['salario'] = pd.to_numeric(df['salario'], errors='coerce')
+print("✔ Columna 'salario' convertida a tipo numérico.")
+
+# Verificar la limpieza final
+print("\nPrimeros 10 salarios después de la limpieza:")
+print(df['salario'].head(10))
+print(f"\nTipo de dato de la columna 'salario': {df['salario'].dtype}")
+
+# Verificar si aún quedan valores no numéricos (NaN)
+non_numeric_count = df['salario'].isnull().sum()
+if non_numeric_count > 0:
+    print(f"\n⚠️ Todavía quedan {non_numeric_count} valores no numéricos (NaN) después de la limpieza. Puede que necesiten un manejo adicional.")
+else:
+    print("\n✅ La columna 'salario' está completamente numérica.")
+
+    ## crear máscara boleana para identificar los valores en la columna salario que son mayores que cero pero menores que 1
+    mask_salarios_entre_0_y_1 = (df['salario'] > 0) & (df['salario'] < 1)
+print(f"Número de salarios entre 0 y 1: {mask_salarios_entre_0_y_1.sum()}")
+
+## Reemplazar los valores con NaN y verificar la limpieza
+import numpy as np
+print("✔ numpy importado como np.")
+
+## la biblioteca numpy ya esta importada por lo que el siguiente paso es aplicar el reemplazo np.nan usando la mascara creada anteriormente para los valores entre 0 y 1
+
+df.loc[mask_salarios_entre_0_y_1, 'salario'] = np.nan
+
+print("\nPrimeros 10 salarios después de la limpieza de valores entre 0 y 1:")
+print(df['salario'].head(10))
+print(f"\nTipo de dato de la columna 'salario': {df['salario'].dtype}")
+
+# Verificar si aún quedan valores no numéricos (NaN)
+non_numeric_count_after_step = df['salario'].isnull().sum()
+print(f"\nTotal de valores NaN en la columna 'salario' después de este paso: {non_numeric_count_after_step}")
+
+## guardar el DataFrame limpio en un nuevo archivo CSV
+df.to_csv('data/personas_limpio.csv', index=False)
+print("✔ DataFrame 'df' guardado exitosamente en '/'data/personas_limpio.csv'")
+
+
