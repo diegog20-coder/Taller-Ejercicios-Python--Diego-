@@ -139,9 +139,9 @@ A continuación se listan los 30 ejercicios. **Debe escribir el valor exacto de 
 | 14 | ¿Cuál es el salario promedio después de limpiar? | `8007002.59` |
 | 15 | ¿Cuál es el salario máximo después de limpiar? | `14999995` |
 | 16 | ¿Cuál es el salario mínimo después de limpiar? | `1000032` |
-| 17 | ¿Cuántos registros tienen `activo` como verdadero después de normalizar? | `PENDIENTE` |
-| 18 | ¿Cuántos registros tienen `activo` como falso después de normalizar? | `PENDIENTE` |
-| 19 | ¿Cuántos registros tienen fecha de nacimiento con formato diferente a YYYY-MM-DD? | `PENDIENTE` |
+| 17 | ¿Cuántos registros tienen `activo` como verdadero después de normalizar? | `149863` |
+| 18 | ¿Cuántos registros tienen `activo` como falso después de normalizar? | `150137` |
+| 19 | ¿Cuántos registros tienen fecha de nacimiento con formato diferente a YYYY-MM-DD? | `89823` |
 | 20 | ¿Cuántas personas nacieron entre 1990 y 2000 (inclusive)? | `PENDIENTE` |
 | 21 | ¿Cuántas personas nacieron antes de 1960? | `PENDIENTE` |
 | 22 | ¿Cuántas personas tienen más de 50 años (fecha actual: 2026-02-26)? | `PENDIENTE` |
