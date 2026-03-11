@@ -123,7 +123,7 @@ A continuación se listan los 30 ejercicios. **Debe escribir el valor exacto de 
 
 | # | Ejercicio | Solución |
 |---|-----------|----------|
-| 01 | ¿Cuántas filas tienen el campo `id` con caracteres no numéricos? | `PENDIENTE` |
+| 01 | ¿Cuántas filas tienen el campo `id` con caracteres no numéricos? | `83648` |
 | 02 | ¿Cuántas veces aparece el nombre "Maria" en el dataset? | `4160` |
 | 03 | ¿Cuántas veces aparece el nombre "Juan" en el dataset? | `3986` |
 | 04 | ¿Cuál es el nombre más frecuente y cuántas veces aparece? | `El nombre más frecuente es Gonzalo y aparece 4221 veces` |
@@ -142,17 +142,17 @@ A continuación se listan los 30 ejercicios. **Debe escribir el valor exacto de 
 | 17 | ¿Cuántos registros tienen `activo` como verdadero después de normalizar? | `149863` |
 | 18 | ¿Cuántos registros tienen `activo` como falso después de normalizar? | `150137` |
 | 19 | ¿Cuántos registros tienen fecha de nacimiento con formato diferente a YYYY-MM-DD? | `89823` |
-| 20 | ¿Cuántas personas nacieron entre 1990 y 2000 (inclusive)? | `PENDIENTE` |
-| 21 | ¿Cuántas personas nacieron antes de 1960? | `PENDIENTE` |
-| 22 | ¿Cuántas personas tienen más de 50 años (fecha actual: 2026-02-26)? | `PENDIENTE` |
-| 23 | ¿Cuántos registros tienen nombre "Carlos" y viven en "Cali"? | `PENDIENTE` |
-| 24 | ¿Cuántos registros tienen nombre "Ana" y son "Medico"? | `PENDIENTE` |
-| 25 | ¿Cuántos registros tienen profesión "Abogado" y salario > 10,000,000? | `PENDIENTE` |
-| 26 | ¿Cuántos registros tienen ciudad "Barranquilla", activos y nacidos después de 1980? | `PENDIENTE` |
-| 27 | ¿Cuál es la ciudad con más "Ingenieros"? | `PENDIENTE` |
-| 28 | ¿Cuál es la profesión con el salario promedio más alto? | `PENDIENTE` |
-| 29 | ¿Cuántos registros tienen email con dominio "gmail.com"? | `PENDIENTE` |
-| 30 | ¿Cuántos registros tienen nombre "Jose" y apellido "Garcia"? | `PENDIENTE` |
+| 20 | ¿Cuántas personas nacieron entre 1990 y 2000 (inclusive)? | `53404` |
+| 21 | ¿Cuántas personas nacieron antes de 1960? | `66577` |
+| 22 | ¿Cuántas personas tienen más de 50 años (fecha actual: 2026-02-26)? | `144846` |
+| 23 | ¿Cuántos registros tienen nombre "Carlos" y viven en "Cali"? | `187` |
+| 24 | ¿Cuántos registros tienen nombre "Ana" y son "Medico"? | `172` |
+| 25 | ¿Cuántos registros tienen profesión "Abogado" y salario > 10,000,000? | `4319` |
+| 26 | ¿Cuántos registros tienen ciudad "Barranquilla", activos y nacidos después de 1980? | `6474` |
+| 27 | ¿Cuál es la ciudad con más "Ingenieros"? | `640` |
+| 28 | ¿Cuál es la profesión con el salario promedio más alto? | `Administrador con un promedio de 8071639.71` |
+| 29 | ¿Cuántos registros tienen email con dominio "gmail.com"? | `56462` |
+| 30 | ¿Cuántos registros tienen nombre "Jose" y apellido "Garcia"? | `96` |
 
 ---
 
